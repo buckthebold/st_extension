@@ -46,7 +46,7 @@ function onExampleInput(event) {
 function handleIncomingMessage(data) {
   //get most recent message from the log
   let mostRecentMessage = context.chat[context.chat.length-1];
-  console.error("message recieved")
+  console.error("message recieved");
 
 }
 
