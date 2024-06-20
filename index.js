@@ -2,13 +2,13 @@
 // The following are examples of some basic extension functionality
 
 //You'll likely need to import extension_settings, getContext, and loadExtensionSettings from extensions.js
-import { extension_settings, getContext, loadExtensionSettings } from "../../../extensions.js";
+import { extension_settings, getContext, loadExtensionSettings } from "../../../../extensions.js";
 
 //You'll likely need to import some other functions from the main script
-import { saveSettingsDebounced } from "../../../../script.js";
+import { saveSettingsDebounced } from "../../../../../script.js";
 
 // turn on the ability to recieve incoming messages
-import { eventSource, event_types } from "../../../script.js";
+import { eventSource, event_types } from "../../../../script.js";
 //eventSource.on(event_types.MESSAGE_SENT, handleIncomingMessage);
 
 //function handleIncomingMessage(data) {
