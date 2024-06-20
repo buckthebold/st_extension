@@ -8,15 +8,15 @@ import { extension_settings, getContext, loadExtensionSettings } from "../../../
 import { eventSource, event_types,saveSettingsDebounced } from "../../../../script.js";
 
 // turn on the ability to recieve incoming messages
-//import { eventSource, event_types } from "../../../script.js";
-//eventSource.on(event_types.MESSAGE_SENT, handleIncomingMessage);
+import { eventSource, event_types } from "../../../script.js";
+eventSource.on(event_types.MESSAGE_SENT, handleIncomingMessage);
 
-//function handleIncomingMessage(data) {
-//  console.log("Message received:", data);
-//}
+function handleIncomingMessage(data) {
+  console.log("booga booga booga2", data);
+}
 
 eventSource.on(event_types.GENERATION_STARTED, ()=>{
-  console.log("Message received:");
+  console.log("booga booga booga");
 });
 
 // Keep track of where your extension is located, name should match repo name
