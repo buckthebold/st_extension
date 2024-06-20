@@ -7,11 +7,6 @@ import { extension_settings, getContext, loadExtensionSettings } from "../../../
 //You'll likely need to import some other functions from the main script
 import { saveSettingsDebounced } from "../../../../script.js";
 
-//This has the function to listen for events
-import { eventSource, event_types } from "../../../script.js";
-// And listen for the Message_recieved event, calling handleincomingmessage if it triggers
-eventSource.on(event_types.MESSAGE_RECEIVED, handleIncomingMessage);
-
 // Keep track of where your extension is located, name should match repo name
 const extensionName = "st-extension-example";
 const extensionFolderPath = `scripts/extensions/third-party/${extensionName}`;
@@ -37,17 +32,6 @@ function onExampleInput(event) {
   const value = Boolean($(event.target).prop("checked"));
   extension_settings[extensionName].example_setting = value;
   saveSettingsDebounced();
-}
-
-
-
-
-
-function handleIncomingMessage(data) {
-  //get most recent message from the log
-  let mostRecentMessage = context.chat[context.chat.length-1];
-  console.error("message recieved");
-
 }
 
 // This function is called when the button is clicked
