@@ -7,14 +7,6 @@ import { extension_settings, getContext, loadExtensionSettings } from "../../../
 //You'll likely need to import some other functions from the main script
 import { saveSettingsDebounced } from "../../../../script.js";
 
-// turn on the ability to recieve incoming messages
-import { eventSource, event_types } from "../../../script.js";
-eventSource.on(event_types.MESSAGE_RECEIVED, handleIncomingMessage);
-
-function handleIncomingMessage(data) {
-    // Handle message
-}
-
 
 // Keep track of where your extension is located, name should match repo name
 const extensionName = "st-extension-example";
