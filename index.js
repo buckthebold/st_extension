@@ -9,12 +9,15 @@ import { saveSettingsDebounced } from "../../../../script.js";
 
 // turn on the ability to recieve incoming messages
 import { eventSource, event_types } from "../../../script.js";
-eventSource.on(event_types.MESSAGE_SENT, handleIncomingMessage);
+//eventSource.on(event_types.MESSAGE_SENT, handleIncomingMessage);
 
-function handleIncomingMessage(data) {
-  console.log("Message received:", data);
-}
+//function handleIncomingMessage(data) {
+//  console.log("Message received:", data);
+//}
 
+eventSource.on(event_types.GENERATION_STARTED, ()=>{
+  console.log("Message received:");
+});
 
 // Keep track of where your extension is located, name should match repo name
 const extensionName = "st-extension-example";
