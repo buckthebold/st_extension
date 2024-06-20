@@ -9,7 +9,7 @@ import { saveSettingsDebounced } from "../../../../script.js";
 
 // turn on the ability to recieve incoming messages
 import { eventSource, event_types } from "../../../script.js";
-eventSource.on(event_types.MESSAGE_RECEIVED, handleIncomingMessage);
+eventSource.on(event_types.MESSAGE_SENT, handleIncomingMessage);
 
 function handleIncomingMessage(data) {
   console.log("Message received:", data);
